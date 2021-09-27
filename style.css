@@ -24,6 +24,7 @@
   }
 }
 
+
 /*---- Homescreen ----*/
 
 /* Header for Navbar currently 0 opacity */
@@ -49,10 +50,10 @@ header {
 /* Content on the frontpage */
 .frontpage {
   float: left;
-  margin-left: 8%;
-  margin-top: 10%;
-  width: 45%;
-  height: 70%;
+  margin-left: 70px;
+  margin-top: 90px;
+  width: 45vw;
+  height: 70vh;
   background-color: #f9f9f9;
   float: left;
   overflow: scroll;
@@ -62,22 +63,24 @@ header {
   float: left;
   margin-left: 6%;
   margin-top: 6%;
-  width: 45%;
-  height: 55%;
+  width: 40%;
+  height: auto;
   background-color: #f9f9f9;
   object-fit: cover;
   display: block;
 }
 
 .frontpagecontainer {
-  margin-left: 53%;
+  margin-left: 50%;
+  margin-right: 2%;
+  height: 20em;
 }
 
 .description {
   position: relative;
   color: #555;
   margin-top: 5%;
-  font-size: 1.5vmin;
+  font-size: 1.5vw;
   font-weight: 300;
 }
 
@@ -93,16 +96,16 @@ header {
   z-index: 5;
   border: none;
   margin-top: 10%;
-  font-size: 3vmin;
+  font-size: 3vw;
   text-align: center;
 }
 
 .quote {
   position: absolute;
-  font-size: 2.5vw;
+  font-size: 2.5vmax;
   color: white;
-  margin-top: 11%;
-  margin-right: 15%;
+  margin-top: 100px;
+  margin-right: 10%;
   margin-left: 55%;
   right: 0px;
   font-weight: 200;
@@ -132,7 +135,7 @@ header {
 .nav2 {
   color: rgb(256, 256, 256);
   font-size: 4vmin;
-  height: 30%;
+  height: 20%;
 }
 
 .navbarbg {
@@ -146,11 +149,11 @@ header {
 
 /* Navbar options styling */
 .menu {
-  right: 0px;
   z-index: 100;
   float: right;
   list-style: none;
-  font-size: 50%;
+  font-size: 20px;
+  transition: ease all 2s;
 }
 
 .menu li {
@@ -235,20 +238,20 @@ header {
 /* Positioning and styling of logo and clickable area */
 .logo {
   margin-top: 2%;
-  width: 3vmin;
+  width: 40px;
   height: auto;
   position: absolute;
 }
 
 .headerlogotext {
   position: absolute;
-  top: 0;
-  font-size: 4vmin;
+  font-size: 40px;
   margin-left: 1%;
   font-weight: 300;
   color: white;
   text-decoration: none;
-  padding-bottom: 50px;
+  transition: ease all 2s;
+
 }
 
 /* Footer */
@@ -593,6 +596,7 @@ header {
 }
 
 .Page-Heading {
+  position: absolute;
   text-align: center;
   font-weight: 600;
   font-size: 8vmin;
@@ -605,4 +609,47 @@ header {
   width: auto;
   height: auto;
   background: transparent;
+}
+
+#top-button {
+  border: none;
+  background-color: #12bff4;
+  color: white;
+}
+
+@media only screen and (max-width: 770px) {
+  .menu {
+    font-size: 15px;
+  }
+  .headerlogotext {
+    font-size: 30px;
+  }
+  .logo {
+    width: 30px;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .menu li {
+    display: inline-block;
+    margin: 10px 0px;
+  }
+  .headerlogotext {
+    font-size: 25px;  }
+  .logo {
+    width: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 530px) {
+  .menu {
+    font-size: 10px;
+  }
+  .headerlogotext {
+    font-size: 20px;  }
+  .logo {
+    width: 20px;
+  }
+
 }

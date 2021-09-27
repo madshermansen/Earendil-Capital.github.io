@@ -4,12 +4,18 @@
     <title>Earendil Capital</title>
     <link rel="shortcut icon" href="Favicon/favicon.ico" />
     <link rel="icon" href="Assets/Favicon/favicon.ico" type="image/x-icon" />
+    
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="parallax.js-1.5.0/parallax.min.js"></script>
+    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
   </head>
 
  <!-- CSS loader-->
+ <!-- <div class="loaderwrapper"><div class="loader"></div></div> -->
+
 
   <!-- Titlepage -->
 
@@ -31,7 +37,7 @@
           <li><a href="aboutme.html">About Me</a></li>
           <li><a href="investing.html">Investing</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <div class="dropdown" style="float: right">
+          <div class="dropdown" style="float: right"></div>
             <button class="dropbtn">&or;</button>
 
             <div class="dropdown-content" style="right: 0">
@@ -49,10 +55,8 @@
         
         <a href="#"
           ><img
-            src="Assets/Blog/Economics of Education.jpg"
+            src="Assets/Blog/Economics-of-Education.jpg"
             alt="book"
-            width="auto"
-            height="90%"
             class="frontpageimg"
         /></a>
         <div class="frontpagecontainer" >
@@ -62,9 +66,8 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
             hic!</h6>
             <h6 style="color: #444; font-weight: 200;font-size: 1.5vmin;">July 15, 20 min to read...</h6>
-          </h6>
         </div>
-        <p style="line-height: 1.5em;font-size: 1.7vmin;display: block;margin-top: 15%; margin-left: 6%; width: 80%;">
+        <p style="line-height: 1.5em;font-size: 1.7vmin;display: block; margin-left: 6%; width: 80%;">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
           ratione perspiciatis praesentium quas vero animi. Repellendus ut,
           accusantium numquam architecto, quaerat, sed temporibus laboriosam
@@ -198,6 +201,6 @@
         <button class="moreinfo2">Subscribe</button>
       </div>
     </div>
-    <div class="footer-bottom"><button id="top-button">Back to top</button></div>
+    <div class="footer-bottom"><button onclick="gototop()" id="top-button">Back to top</button></div>
   </div>
 </html>
