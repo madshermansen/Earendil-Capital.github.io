@@ -33,11 +33,11 @@
             class="logo"
         /></a>
         <ul class="menu">
-          <li class="selected"><a href="homepage.html">Home</a></li>
+          <li class="selected"><a href="index.html">Home</a></li>
           <li><a href="aboutme.html">About Me</a></li>
           <li><a href="investing.html">Investing</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <div class="dropdown" style="float: right"></div>
+          <div class="dropdown" style="float: right">
             <button class="dropbtn">&or;</button>
 
             <div class="dropdown-content" style="right: 0">
@@ -51,7 +51,7 @@
           </div>
         </ul>
       </div>
-      <div class="frontpage">
+      <div class="frontpage-desktop">
         
         <a href="#"
           ><img
@@ -67,7 +67,7 @@
             hic!</h6>
             <h6 style="color: #444; font-weight: 200;font-size: 1.5vmin;">July 15, 20 min to read...</h6>
         </div>
-        <p style="line-height: 1.5em;font-size: 1.7vmin;display: block; margin-left: 6%; width: 80%;">
+        <p class="frontpagedisc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
           ratione perspiciatis praesentium quas vero animi. Repellendus ut,
           accusantium numquam architecto, quaerat, sed temporibus laboriosam
@@ -88,9 +88,35 @@
   </body>
 
   <!-- About Me-->
+  <div class="frontpage-mobile">
+        
+    <a href="#"
+      ><img
+        src="Assets/Blog/Economics-of-Education.jpg"
+        alt="book"
+        class="frontpageimg"
+    /></a>
+    <div class="frontpagecontainer" >
+      <button class="topic" id="topictag">Economics</button>
+      <h2 class="topictitle">The Economics of Education</h2>
+      <h6 class="description">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
+        hic!</h6>
+        <h6 style="color: #444; font-weight: 200;font-size: 1.5vmin;">July 15, 20 min to read...</h6>
+    </div>
+    <p class="frontpagedisc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+      ratione perspiciatis praesentium quas vero animi. Repellendus ut,
+      accusantium numquam architecto, quaerat, sed temporibus laboriosam
+      ipsum ducimus commodi quam iure nemo mollitia explicabo rem eos
+      voluptatum quae veniam minus magni error odio? Ab ratione similique
+      minus quos sit eaque voluptatum voluptates?
+    </p>
+    <button style="border: none; color: #444; font-weight: 200;font-size: 1.5vmin; margin-left: 6%;">Read More &rarr;</button>
+  </div>
   <div class="info">
     <div class="infocontainers">
-      Investing
+      <p class="infotitle">Investing</p>
       <p class="infotext">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam placeat
         libero repellendus, doloremque perferendis natus optio molestiae omnis
@@ -102,7 +128,7 @@
       </button>
     </div>
     <div class="infocontainers">
-      A Little About Me
+      <p class="infotitle">A Little About me</p>
       <p class="infotext">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero amet
         quaerat ad quis. Qui, consequuntur, ex ipsum tempora cumque blanditiis
@@ -114,7 +140,7 @@
       </button>
     </div>
     <div class="infocontainers">
-      Mental Models
+      <p class="infotitle">Mental Models</p>
       <p class="infotext">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
         iste eum accusamus sint repellat voluptatem, veritatis laborum aliquam
@@ -134,7 +160,7 @@
     <div class="latestpostsinfo">
       <div class="mylatestinfo">
         My Latest Posts
-        <p style="font-size: 0.8vw;font-weight: 400;margin-top: 10%;">
+        <p class="mylatestinfo3">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere nemo,
           at consequatur quaerat, necessitatibus voluptatibus sapiente voluptas
           magni rerum dolor aut optio eveniet modi? Qui in beatae nemo expedita!
