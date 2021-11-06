@@ -1,3 +1,35 @@
+<?php 
+
+// Details for logging in
+$servername = "localhost";
+$username = "madsquoa";
+$password = "ForThe1MAn";
+// Create new connection
+$conn = mysqli_connect($servername, $username, $password, "madsquoa_cms");
+
+// Check the connection
+if (!$conn) {
+    echo "Connection failed: " . mysqli_connect_error();
+    }
+
+// Retrieving the data from the database
+$sql = 'SELECT * FROM Blog';
+// make a query and get results
+$result = mysqli_query($conn, $sql);
+// fetch resulting rows as an array
+$bloginfo = mysqli_fetch_assoc($result);
+
+
+$results_array = array();
+$result = mysqli_query($conn, $sql);
+while ($row = mysqli_fetch_assoc($result)) {
+  $results_array[] = $row;
+}
+// Free the result and close the connection
+mysqli_free_result($result);
+mysqli_close($conn);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +57,7 @@
       data-z-index="-100"></div>
 
       <div class="nav">
-        <a href="homepage.html" class="headerlogotext"
+        <a href="index.php" class="headerlogotext"
           >Earendil Capital
           <img
             src="Assets/Favicon/android-chrome-192x192.png"
@@ -33,23 +65,41 @@
             class="logo"
         /></a>
         <ul class="menu">
-          <li class="selected"><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html">About Me</a></li>
-          <li><a href="investing.html">Investing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="selected"><a href="index.php">Home</a></li>
+          <li><a href="aboutme.php">About Me</a></li>
+          <li><a href="investing.php">Investing</a></li>
+          <li><a href="blog.php">Blog</a></li>
           <div class="dropdown" style="float: right">
             <button class="dropbtn">&or;</button>
 
             <div class="dropdown-content" style="right: 0">
-              <a href="mental-models.html">Mental Models</a>
-              <a href="miscelaneous.html">Miscelaneous</a>
-              <a href="philosophy.html">Philosophy</a>
-              <a href="politics.html">Politics</a>
-              <a href="book-reviews.html">Book Reveiws</a>
-              <a href="economics.html">Economics</a>
+              <a href="mental-models.php">Mental Models</a>
+              <a href="miscelaneous.php">Miscelaneous</a>
+              <a href="philosophy.php">Philosophy</a>
+              <a href="politics.php">Politics</a>
+              <a href="book-reviews.php">Book Reveiws</a>
+              <a href="economics.php">Economics</a>
             </div>
           </div>
         </ul>
+        <input type="checkbox" id="active">
+        <div class="containernavbar">
+          <label for="active" class="menu-button">&#9776</label>
+          <ul class="menu-mobile">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="aboutme.php">About Me</a></li>
+            <li><a href="investing.php">Investing</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li><a href="mental-models.php">Mental Models</a></li>
+            <li><a href="miscelaneous.php">Miscelaneous</a></li>
+            <li><a href="philosophy.php">Philosophy</a></li>
+            <li><a href="politics.php">Politics</a></li>
+            <li><a href="book-reviews.php">Book Reveiws</a></li>
+            <li><a href="economics.php">Economics</a></li>
+            
+          </ul>
+        </div>
+
       </div>
       <div class="frontpage-desktop">
         
@@ -65,7 +115,7 @@
           <h6 class="description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
             hic!</h6>
-            <h6 style="color: #444; font-weight: 200;font-size: 1.5vmin;">July 15, 20 min to read...</h6>
+            <h6 class="readtime">July 15, 20 min to read...</h6>
         </div>
         <p class="frontpagedisc">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
@@ -103,7 +153,7 @@
       <h6 class="description">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia,
         hic!</h6>
-        <h6 style="color: #444; font-weight: 200;font-size: 1.5vmin;">July 15, 20 min to read...</h6>
+        <h6 class="readtime">July 15, 20 min to read...</h6>
     </div>
     <p class="frontpagedisc">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
@@ -173,36 +223,16 @@
         </p>
       </div>
       <div class="scrollablepostbox">
-        <div class="post">
+
+      <?php 
+        foreach ($results_array as $post) {
+        echo '<div class="post">
           <img src="Assets/Blog/Blog Post 1 Pic.jpeg" class="postimage">
-          <h1 class="posttitle">Lorem ipsum dolor sit amet.</h1>
-          <p class="postdescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi asperiores nemo officia itaque dolores eaque. Totam doloribus ab sit non!</p>
-        </div>
-        <div class="post">
-          <img src="Assets/Blog/Blog Post 1 Pic.jpeg" class="postimage">
-          <h1 class="posttitle">Lorem ipsum dolor sit amet.</h1>
-          <p class="postdescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi asperiores nemo officia itaque dolores eaque. Totam doloribus ab sit non!</p>
-        </div>
-        <div class="post">
-          <img src="Assets/Blog/Blog Post 1 Pic.jpeg" class="postimage">
-          <h1 class="posttitle">Lorem ipsum dolor sit amet.</h1>
-          <p class="postdescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi asperiores nemo officia itaque dolores eaque. Totam doloribus ab sit non!</p>
-        </div>
-        <div class="post">
-          <img src="Assets/Blog/Blog Post 1 Pic.jpeg" class="postimage">
-          <h1 class="posttitle">Lorem ipsum dolor sit amet.</h1>
-          <p class="postdescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi asperiores nemo officia itaque dolores eaque. Totam doloribus ab sit non!</p>
-        </div>
-        <div class="post">
-          <img src="Assets/Blog/Blog Post 1 Pic.jpeg" class="postimage">
-          <h1 class="posttitle">Lorem ipsum dolor sit amet.</h1>
-          <p class="postdescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi asperiores nemo officia itaque dolores eaque. Totam doloribus ab sit non!</p>
-        </div>
-        <div class="post">
-          <img src="Assets/Blog/Blog Post 1 Pic.jpeg" class="postimage">
-          <h1 class="posttitle">Lorem ipsum dolor sit amet.</h1>
-          <p class="postdescription">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi asperiores nemo officia itaque dolores eaque. Totam doloribus ab sit non!</p>
-        </div>
+          <h1 class="posttitle">' . $post["title"] . '</h1>
+          <p class="postdescription">' . $post["description"] . '</p>
+        </div>';
+}
+        ?>
         </div>
       </div>
     </div>
@@ -224,7 +254,7 @@
       <input type="submit" id="submit" class="corner" />
     </form>
     <div class="footer-container">
-      <div class="footer-subscribe-contact"><div>Contact Me</div>
+      <div class="footer-subscribe-contact" style="margin-top: 0;"><div>Contact Me</div>
         <button class="moreinfo2">Email</button>
       </div>
       <div class="footer-subscribe-contact"><div>Stay Updated</div>

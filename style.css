@@ -26,12 +26,12 @@
 
 
 /*---- Homescreen ----*/
-
 /* Header for Navbar currently 0 opacity */
 header {
   position: relative;
   background: rgba(0, 0, 5, 0);
   height: 100vh;
+  
 }
 
 /* Sets the background for the homescreen */
@@ -51,12 +51,13 @@ header {
 .frontpage-desktop {
   float: left;
   margin-left: 70px;
-  margin-top: 90px;
+  margin-top: 1%;
   width: 45%;
-  height: calc(700px - 1vw);
+  max-height: 70%;
+  padding-bottom: calc(100px - 2vh);
   background-color: #f9f9f9;
   float: left;
-  overflow: scroll;
+  overflow: hidden;
 }
 
  .frontpage-mobile {
@@ -69,36 +70,42 @@ header {
   display: block;
   margin-left: 6%; 
   width: 80%;
+  margin-top: 5%;
 }
 
 .frontpageimg {
   float: left;
-  margin-left: 6%;
-  margin-top: 6%;
-  width: 250px;
-  height: auto;
+  margin-left: 3%;
+  margin-top: 3%;
+  width: auto;
+  height: 15em;
   background-color: #f9f9f9;
   object-fit: cover;
   display: block;
 }
 
-.frontpagecontainer {
-  margin-left: 50%;
+.frontpagecontainer { 
   margin-right: 2%;
   margin-bottom: 3%;
+  overflow: hidden;
+  height: 18em;
+  padding-left: 5%;
+  
 }
 
 .description {
   position: relative;
   color: #555;
   margin-top: 5%;
-  font-size: 20px;
+  font-size: 1vw;
   font-weight: 300;
 }
 
 .topictitle { 
-  font-size: 40px;
+  font-size: 28px;
   color: #333;
+  text-align: left;
+  margin-top: 5%;
 }
 
 .topic {
@@ -108,8 +115,9 @@ header {
   z-index: 5;
   border: none;
   margin-top: 10%;
-  font-size: 30px;
+  font-size: 0.8vw;
   text-align: center;
+  border-radius: 10px;
 }
 
 .quote {
@@ -163,6 +171,7 @@ header {
   float: right;
   list-style: none;
   font-size: 20px;
+  transition: all 1s;
   
 }
 
@@ -192,6 +201,13 @@ header {
   transition: width 0.8s;
 }
 
+.menu-mobile {
+  display: none;
+}
+
+.containernavbar {
+  display: none;
+}
 /* Dropdown Button */
 .dropbtn {
   color: white;
@@ -243,7 +259,6 @@ header {
   background-color: rgba, green, blue, alpha);
 }
 */
-
 /* Positioning and styling of logo and clickable area */
 .logo {
   
@@ -260,7 +275,7 @@ header {
   font-weight: 300;
   color: white;
   text-decoration: none;
-  
+  transition: all 1s;
 
 }
 
@@ -268,7 +283,7 @@ header {
 
 .footer {
   background-color: #12bff4;
-  height: 220px;
+  height: 200px;
   position: relative;
   text-align: center;
 }
@@ -290,6 +305,7 @@ header {
   font-size: 17px;
   border: none;
 }
+
 
 .round {
   width: 40%;
@@ -334,6 +350,7 @@ header {
 .footer-subscribe-contact {
   width: 20%;
   float: left;
+  display: block;
 }
 
 
@@ -372,7 +389,10 @@ header {
   padding: 0.2em 0.5em;
   font-size: 20px;
   text-align: center;
-
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .moreinfo2 {
@@ -384,7 +404,6 @@ header {
   font-size: 20px;
   text-align: center;
   background-color: #12bff4;
-
 }
 
 
@@ -405,12 +424,13 @@ header {
 }
 
 .infotext {
-  margin-top: 5%;
+  margin-top: 0%;
   color: #999;
   font-size: 25px;
   position:relative;
   font-weight: 400;
-  height: 30%;
+  overflow: hidden;
+  height: auto;
 }
 
 .latestpostcontainer {
@@ -460,16 +480,16 @@ header {
   display: flex;
   justify-content: center;
   position: relative;
+  height: auto;
   
 }
 
 .allposts {
-  height: 100%;
+  height: auto;
   width: 100%;
   z-index: 100;
   display: block;
   position: absolute;
-  justify-content: center;
 }
 
 .individual-post {
@@ -479,7 +499,7 @@ header {
   color: black;
   background-color: #f9f9f9;
   width: 70%;
-  height: 7%;
+  height: 300px;
   font-size: 1vmin;
   margin-top: 5%;
 }
@@ -495,10 +515,10 @@ header {
   color: white;
   float: left;
   text-align: center;
-  width: 26%;
-  padding-top: 20%;
-  padding-left: 10%;
-  padding-right: 10%;
+  width: 35%;
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   font-weight: 800;
   font-size: 60px;
 }
@@ -560,7 +580,7 @@ header {
 
 #latestpostsinvesting {
   position: absolute;
-  height: 1px;
+  height: 1000px;
   width: 100%;
   background-color: #12bff4;
 }
@@ -570,21 +590,22 @@ header {
 }
 
 .aboutme {
-  height: auto;
+  height: 100em;
   width: 100%;
   font-weight: 300;
   justify-content: center;
   display: flex;
   text-align: center;
   background-color: #f9f9f9;
-  margin-bottom: 3%;
 }
 
 .aboutmetext {
+  margin-top: 5%;
   text-align: center;
-  font-size: 2vmin;
+  font-size: 25px;
   line-height: 1.5em;
   width: 70%;
+  transition: all 2s ease-in-out;
 }
 
 .postimage {
@@ -600,7 +621,7 @@ header {
 .centerimage {
   display: block;
   margin: auto;
-  width: 70%;
+  width: 50vw;
   height: auto;
   justify-content: center;
   margin-top: 1%;
@@ -614,13 +635,30 @@ header {
   justify-content: center;
   margin-top: 1%;
   margin-bottom: 1%;
+  margin: auto;
+  width: 70vw;
+  height: 30vw;
+  justify-content: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .Page-Heading {
   position: absolute;
+  color: white;
   text-align: center;
+  width: 100%;
   font-weight: 600;
   font-size: 8vmin;
+  top: 30px;
+}
+
+.investingpost {
+  text-align: center;
+  font-size: 4vw;
+  height: 1em;
+  float: inline-start;
+
 }
 
 .parallax-window {
@@ -640,6 +678,10 @@ header {
 
 .moreinfo-mobile {
   display: none;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 #readmorefrontpage {
@@ -649,20 +691,193 @@ header {
   font-size: 1.5vmin; 
   margin-left: 6%;
 }
+.blogimages {
+  float: left;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.blogimages2 {
+  float: right;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+}
+
+.readtime {
+  color: #444; 
+  font-weight: 200;
+  font-size: 1.5vmin;
+}
+
+#active {
+  display: none;
+}
+
+.corner {
+  display: none;
+}
+
+::-webkit-input-placeholder {
+  padding-left: 3px;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  padding-left: 3px;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  padding-left: 3px;
+}
+
+:-ms-input-placeholder {  
+  padding-left: 3px;
+}
+
+.investing-body {
+  padding-top: 30px;
+  height: auto;
+  padding-bottom: 50px;
+  background: white;
+  text-align: center;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#investing-body-title {
+  font-size: 35px;
+  font-weight: 600;
+} 
+
+#investing-body-img {
+  width: 100%;
+  height: 400px;
+}
+
+#investing-body-subtitle {
+  text-align: left;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.investing-body-scroll {
+  height: auto;
+}
 
 @media only screen and (max-width: 770px) {
-  .menuselector {
+  #investing-body-mobile {
+    width: 100%;
+    padding: 0;
+  }
+
+  #investing-body-img {
+  }
+
+  .menu {display: none;}
+
+  .menu-mobile {
+    display: block;
+    list-style: none;
+  }
+
+  .menu-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: white;
+    z-index: 100;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    background: none;
+    transition: all 1s ease-in-out;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+
+
+  .containernavbar {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+    clip-path: circle(25px at calc(100% -  45px) 45px);
+    transition: all 1s ease-in-out;
+    background: none;
+    z-index: 1000;
+  }
+  .containernavbar ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .containernavbar ul li {
+    margin: 15px;
+  }
+
+  .containernavbar ul li a{
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    
+  }
+
+  .containernavbar ul li a::after{
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    width: 0px;
+    height: 1px;
+    background: black;
+    transition:  all 0.3s ease;
+  }
+
+  .containernavbar ul li a:hover::after{
+    width: 100%;
+    transition: width 0.8s;
+  }
+
+
+  #active:checked ~ .containernavbar {
+    background: white;
+    clip-path: circle(75%);
+    color: black;
+  }
+  #active:checked ~ html {
+    overflow: hidden;
+  }
+#active {
+  display: none;
+}
+
+  #active:checked ~ .containernavbar .menu-button {
+    color: black;
 
   }
-  .menu {
-    font-size: 25px;
-    display: none;
-  }
+
+
   .headerlogotext {
     font-size: 0px;
   }
   .logo {
     width: 50px;
+    top: 20px;
+    left: 20px;
 
   }
   .info {
@@ -683,6 +898,7 @@ header {
     font-size: 40px;
     padding-left: 5%;
     padding-right: 5%;
+    padding-top: 20%;
     margin: auto;
     width: 80%;
   }
@@ -710,22 +926,34 @@ header {
     display: none;
   }
   .quote {
-    width: 80%;
-    height: 550px;
+    width: 80%; 
+    height: 85%;
     left: 0px;
     margin: 0px;
     font-weight: 400;
-    font-size: 40px;  
+    font-size: calc(2.5vh + 4vw);  
+    margin-top: 20px;
     margin-left: 10%;
     margin-right: 10%;
   }
   #quoteby {
+    margin-top: 5%;
     margin-left: 0px;
     text-align: right;
+    font-size: calc(1.2vh + 1.5vw);
   }
   .post {
     height: 30%;
   }
+
+  .posttitle {
+    font-size: 20px;
+  }
+
+  .postdescription {
+    font-size: 15px;
+  }
+
   .scrollablepostbox {
     margin-top: 5%;
     height: 40%;
@@ -737,7 +965,7 @@ header {
   #moreinfo-mobile {
     display: block;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 2%;
     border-color: #097191;
     color: #097191;
     font-weight: 600;
@@ -751,8 +979,10 @@ header {
   }
   .frontpageimg {
     width: 80%;
+    height: 100%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 3%;
   }
   .topic {
     display: none;
@@ -763,8 +993,99 @@ header {
   .frontpagedisc {
     text-align: center;
     width: 80%;
+    height: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 5%;
     font-size: 20px;
   }
+  .readtime {
+    font-size: 0px;
+  }
+  .round {
+    padding: 6px; 
+    margin-top: 8px; 
+    border: none;
+    width: 90%;
+  }
+  .footer {
+    background-color: #12bff4;
+    height: 300px;
+    position: relative;
+    text-align: center;
+  }
+  .footer-container {
+    float: none;
+    width: 100%;
+    height: 70%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 1%;
+    display: block;
+  }
+  .footer-subscribe-contact {
+    height: 2em;
+    width: 10em;
+    float: none;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .moreinfo2 {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+  #submit {
+    display: none;
+  }
+  .corner {
+    display: none;
+  }
+  .moreinfo {
+    margin-top: 3%;
+  }
+  .aboutme {
+    height: calc((100em - 100vw));
+  }
+
+  .aboutmetext {
+    font-size: 15px;
+  }
+  .nav2 {
+    height: 10%;
+  }
+  .Page-Heading {
+    font-size: 30px;
+  }
+  .individual-post {
+    height: 150px;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+  }
+  .latestposts {
+    min-height: 200vh;
+
+  }
+  .centerimage2 {
+    width: 100%;
+  }
+  #investingpage {
+    width: 100%;
+    height: 40em;
+  }
+  .investingpost {
+    font-size: 20px;
+    height: auto;
+  
+  }
+  .frontpagecontainer {
+    display: none;
+  }
 }
+

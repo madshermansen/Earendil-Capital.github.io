@@ -16,42 +16,67 @@
   <!-- Header -->
   <header>
 
-  <div class="navbarbg" data-parallax="scroll" data-image-src="Assets/Home Screen/Navbar BG.png"
+  <div class="navbarbg" data-parallax="scroll" data-image-src="Assets/Home-screen/Navbar-BG.png"
   data-z-index="-100"></div>
-    <div class="nav2">
-        <a href="homepage.html"><img src="Assets/Favicon/android-chrome-192x192.png" class="logo" ></a>
+  <div class="nav2">
+    
+    <a href="homepage.php" class="headerlogotext"
+      >Earendil Capital
+      <img
+        src="Assets/Favicon/android-chrome-192x192.png"
+        alt="logo of website"
+        class="logo"
+    /></a>
         <ul class="menu">
-          <li class="selected"><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html">About Me</a></li>
-          <li><a href="investing.html">Investing</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li class="selected"><a href="index.php">Home</a></li>
+          <li><a href="aboutme.php">About Me</a></li>
+          <li><a href="investing.php">Investing</a></li>
+          <li><a href="blog.php">Blog</a></li>
           <div class="dropdown" style="float: right">
             <button class="dropbtn">&or;</button>
 
             <div class="dropdown-content" style="right: 0">
-              <a href="mental-models.html">Mental Models</a>
-              <a href="miscelaneous.html">Miscelaneous</a>
-              <a href="philosophy.html">Philosophy</a>
-              <a href="politics.html">Politics</a>
-              <a href="book-reviews.html">Book Reveiws</a>
-              <a href="economics.html">Economics</a>
+              <a href="mental-models.php">Mental Models</a>
+              <a href="miscelaneous.php">Miscelaneous</a>
+              <a href="philosophy.php">Philosophy</a>
+              <a href="politics.php">Politics</a>
+              <a href="book-reviews.php">Book Reveiws</a>
+              <a href="economics.php">Economics</a>
             </div>
           </div>
         </ul>
-          <h1 class="Page-Heading">Investing</h1>
-      </div>
+        <input type="checkbox" id="active">
+        <div class="containernavbar">
+          <label for="active" class="menu-button">&#9776</label>
+          <ul class="menu-mobile">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="aboutme.php">About Me</a></li>
+            <li><a href="investing.php">Investing</a></li>
+            <li><a href="blog.php">Blog</a></li>
+            <li><a href="mental-models.php">Mental Models</a></li>
+            <li><a href="miscelaneous.php">Miscelaneous</a></li>
+            <li><a href="philosophy.php">Philosophy</a></li>
+            <li><a href="politics.php">Politics</a></li>
+            <li><a href="book-reviews.php">Book Reveiws</a></li>
+            <li><a href="economics.php">Economics</a></li>
+            
+          </ul>
+        </div>
+    </div>
+    <h1 class="Page-Heading">Investing</h1>
 
 <!-- End of Header -->
 
 
-<!-- Content -->
-<p style="text-align: center;font-weight: 600;font-size: 4vmin;margin-top: 5%;">My Latest Post</p>
-      <div class="aboutme">
-      <p class="aboutmetext">
+<!-- Content --> 
+      <div class="aboutme" id="investingpage">
+      <div class="aboutmetext">
+        <div class="investingpost">My Latest Post</div>
+
         <img src="Assets/Investing/McDonalds.jpg" class="centerimage2">
         
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quam, minus itaque accusamus at eaque officia laboriosam dolore quis vero sit deleniti. In corrupti quod mollitia a consequuntur sit sed laboriosam harum asperiores, odit error maxime, blanditiis, laborum aliquid nobis quo veniam beatae. Sunt aliquam, ipsa quo minus necessitatibus consequatur.
-      </p>  
+      </div>  
       </div>
       <div class="posts">
         <div class="latestposts" data-parallax="scroll" data-image-src="Assets/Investing/Section-3-BG.jpg"
@@ -113,8 +138,6 @@
         <button class="moreinfo2">Subscribe</button>
       </div>
     </div>
-    <div class="footer-bottom"><button onclick="gototop()" id="top-button">Back to top</button></div>
+    <div class="footer-bottom">Back to top</div>
   </div>
-</html>
-
 </html>
