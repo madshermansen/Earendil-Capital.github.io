@@ -1,4 +1,4 @@
-  <div class="nav2 navbar">
+  <div class="nav2" id="navbar">
   
       <img
             src="Favicon/android-chrome-192x192.png"

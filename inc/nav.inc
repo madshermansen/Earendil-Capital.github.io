@@ -1,4 +1,4 @@
-      <div class="nav navbar">
+      <div class="nav" id="navbar">
       <img
             src="Favicon/android-chrome-192x192.png"
             alt="logo of website"
@@ -23,9 +23,12 @@
             </div>
           </div>
         </ul>
-        <input type="checkbox" id="active">
-        <div class="containernavbar">
-          <label for="active" class="menu-button"></label>
+
+
+      </div>
+          <input type="checkbox" id="active">
+          <div class="containernavbar">
+          <label for="active" class="menu-button" id="menuchange"></label>
           <ul class="menu-mobile">
             <li><a href="index.php">Home</a></li>
             <li><a href="investing.php">Investing</a></li>
@@ -39,5 +42,3 @@
             
           </ul>
         </div>
-
-      </div>
