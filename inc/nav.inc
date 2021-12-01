@@ -26,8 +26,15 @@
 
 
       </div>
-          <input type="checkbox" id="active">
-          <div class="containernavbar">
+                <input type="checkbox" id="active">
+                <div class="containernavbar" id="containernavbar">
+                <img
+            src="Favicon/android-chrome-192x192.png"
+            alt="logo of website"
+            class="logo"
+        />
+        <a href="index.php" class="headerlogotext2"
+          >Earendil Capital</a>
           <label for="active" class="menu-button" id="menuchange"></label>
           <ul class="menu-mobile">
             <li><a href="index.php">Home</a></li>

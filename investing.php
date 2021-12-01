@@ -46,8 +46,7 @@ mysqli_close($conn);
 
   <div class="navbarbg" data-parallax="scroll" data-image-src="Assets/Home-screen/Navbar-BG.png"
   data-z-index="-100"></div>
-
-  <?php include('inc/nav2.inc') ?>
+  <?php include('inc/nav.inc') ?>
     <h1 class="Page-Heading">Investing</h1>
 
 <!-- End of Header -->
