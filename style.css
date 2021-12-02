@@ -1570,7 +1570,6 @@ header {
 
   .scrollablepostbox {
     margin-top: 5%;
-    height: 60%;
   }
   .topictitle {
     text-align: left;
@@ -1804,7 +1803,7 @@ header {
 
   }
   .scrollablebox2 {
-    margin-top: calc(25% - 38px);
+    margin-top: calc(25% + 100px);
     width: 90%;
 
   }
