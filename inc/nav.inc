@@ -35,7 +35,11 @@
         />
         <a href="index.php" class="headerlogotext2"
           >Earendil Capital</a>
-          <label for="active" class="menu-button" id="menuchange"></label>
+          <label for="active" class="menu-button" id="menuchange">
+          <div class="menu-btn-burger">
+          </div>
+          
+          </label>
           <ul class="menu-mobile">
             <li><a href="index.php">Home</a></li>
             <li><a href="investing.php">Investing</a></li>
