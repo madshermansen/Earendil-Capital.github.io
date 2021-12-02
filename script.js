@@ -10,6 +10,7 @@ const navbarafter = document.getElementById("navbar")
 var prevScrollpos = window.pageYOffset;
 document.getElementById("navbar").style.top = "0";
 document.getElementById("menuchange").style.top = "10px";
+document.getElementById("ddc").style.margin =  "15px 0 0 0"
 
 window.onscroll = function() {
   var scrollTop = $(window).scrollTop();
@@ -24,10 +25,12 @@ window.onscroll = function() {
     document.getElementById("navbar").style.visibility = "visible";
     document.getElementById("navbar").style.top = "0";
     document.getElementById("menuchange").style.top = "10px";
+    document.getElementById("ddc").style.margin =  "15px 0 0 0"
   } else {
     document.getElementById("navbar").style.top = "-80px";
     document.getElementById("navbar").style.visibility = "hidden";
     document.getElementById("menuchange").style.top = "-80px";
+    document.getElementById("ddc").style.margin =  "-23em 0 0 0"
   }
   prevScrollpos = currentScrollPos;
 }

@@ -135,10 +135,11 @@ foreach ($results_array as $checkid) {
         <?php 
           foreach ($results_array as $post) {
             echo '<div class="post">
-            <div><h1 class="posttitle">' . $post["Title"] . '</h1>
-            <p class="postdescription">' . $post["Summary"] . '</p></div>
+            <div>
             <a href="' . $post["HREF"] . '">
               <img src="' . $post["Image"] . '" class="postimage"></a>
+            <h1 class="posttitle">' . $post["Title"] . '</h1></div>
+            <p class="postdescription">' . $post["Summary"] . '</p>
           </div>';
   }
           ?>

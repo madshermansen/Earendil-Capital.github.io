@@ -13,7 +13,7 @@
           <div class="dropdown" style="float: right">
             <button class="dropbtn">&#9662</button>
 
-            <div class="dropdown-content" style="right: 0">
+            <div class="dropdown-content" id="ddc" style="right: 0">
               <a href="mental-models.php">Mental Models</a>
               <a href="miscelaneous.php">Miscelaneous</a>
               <a href="philosophy.php">Philosophy</a>

@@ -182,11 +182,10 @@ header {
 
 .frontpagedisc {
   line-height: 1.5em;
-  font-size: calc(0.5vw + 1vh);
+  font-size: 16px;
   display: block;
-  margin-left: 6%; 
-  margin-top: 1%;
-  width: 80%;
+  margin: 5px 5% 5px 5%;
+  width: 90%;
   color: #f9f9f9;
   float: left;
   
@@ -198,8 +197,8 @@ header {
   border: none;
   color: #ffc201;
   font-weight: 200;
-  font-size: calc(0.5vw + 1vh);
-  margin-left: 6%;
+  font-size: 16px;
+  margin-left: 5%;
   background-color: rgba(0,0,0,0);
   float: left;
 }
@@ -273,7 +272,7 @@ header {
 
 .topictitle { 
   margin-top: 20px;
-  font-size: calc(10px + 0.7vw + 1.4vh);
+  font-size: 30px;
   color: #ffc201;
   text-align: left;
   font-weight: 400;
@@ -282,9 +281,9 @@ header {
 }
 
 #topictag {
-  color: white;
+  color: #ffc201;
   font-weight: 200;
-  font-size: calc(0.5vw + 1vh);
+  font-size: 16px;
 
 }
 
@@ -421,6 +420,8 @@ header {
   z-index: 100;
   height: 0px;
   overflow: hidden;
+  transition: 0.2s;
+  transition-delay: border 0.2s;
 }
 
 /* Options inside container*/
@@ -439,10 +440,11 @@ header {
 }
 
 /* Dropdown menu shown on hover */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content, li:hover+.dropdown .dropdown-content {
   transition: 0.8s;
+  transition-delay: border 0s;
   height: 15.5em;
-  border: solid #ffc201 1px;
+  border: 1px #ffc201 solid;
 }
 
 /* Color change of dropdown button when hovered */
@@ -651,13 +653,14 @@ header {
   padding-bottom: 10px;
   color: #ffc201;
   font-weight: 300;
+  font-size: 40px;
   
 }
 
 .infotext {
   margin-top: 0%;
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   position:relative;
   min-height: 70%;
   font-weight: 300;
@@ -790,7 +793,6 @@ header {
 }
 
 .post {
-  display: flex;
   margin-top: 5%;
   margin-left: 5%;
   margin-bottom: 5%;
@@ -805,12 +807,11 @@ header {
 
 .posttitle {
   color: #ffc201;
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 600;
-  margin-left: 5%;
   z-index: 100;
-  padding-top: 2%;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 5%;
+  width: 100%;
 }
 
 .posttitle2 {
@@ -866,6 +867,8 @@ header {
   margin-left: 5%;
   color: white;
   height: 60%;
+  width: 90%;
+  text-align: justify;
 }
 
 .scrollablepostbox{
@@ -970,14 +973,11 @@ header {
   display: block;
   float: right;
   object-fit: cover;
-  max-width: 200px;
-  max-height: 500px;
-  height: 90%;
-  margin-top: 5%;
-  margin-right: 20px;
-  margin-left: 20px;
   padding: 5px;
   border: white 2px solid;
+  height: 150px;
+  width: 40%;
+  margin: 0 5% 5px 15px;
 }
 
 .centerimage {
@@ -1245,18 +1245,12 @@ header {
   .block4 {
     display: block;
   }
-  
-  .postimage {
-    max-height: 90%;
-    width: 150px;
-    margin: 20px;
-  }
 
   #topictag {
-    color: white;
+    width: 80%;
+    color: #ffc201;
     font-weight: 200;
     font-size: 20px;
-    width: 80%;
     margin-left: 10%;
     margin-bottom: 10px;
   }
@@ -1443,6 +1437,7 @@ header {
   }
 
   .headerlogotext2 {
+    visibility: hidden;
     font-size: 30px;
     vertical-align: middle;
     position: relative;
@@ -1452,6 +1447,10 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 300;
+  }
+
+  #active:checked ~ .containernavbar .headerlogotext2{
+    visibility: visible;
   }
 
   .headerlogotext2:hover {
@@ -1469,11 +1468,13 @@ header {
   .info {
     float:none;
     display: block;
+    padding-bottom: 20px;
   }
   .infocontainers {
     float:none;
     width: 80%;
     margin: auto;
+    padding-bottom: 50px;
   }
   .latestpostsinfo {
     top: 0%;
@@ -1509,7 +1510,7 @@ header {
     z-index: 99;
     background-color: #0E1B31;
     height: auto;
-    margin: 20px 20px 20px ;
+    margin: 40px 20px 20px ;
     padding: 20px 0px 20px 0px;
     background-color: rgba(0, 0, 0, 0.5);
     border: #ffc201 3px solid;
@@ -1522,13 +1523,6 @@ header {
   }
   .frontpage-desktop {
     display: none;
-  }
-
-  .frontpage-mobile a {
-    width: 80%;
-    height: 100%;
-    max-width: 28em;
-    margin-left: 10%;
   }
 
   .quote {
@@ -1560,7 +1554,7 @@ header {
   }
 
   .posttitle {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .postdescription {
@@ -1603,12 +1597,13 @@ header {
     display: none;
   }
   .frontpageimg {
-    max-width: auto;
+
     object-fit: cover;
     margin: 0;
     float: left;
-    width: 80%;
+    width: 90%;
     height: 100%;
+    margin-left: 2.5%
   }
   .description {
     display: none;
@@ -1620,6 +1615,7 @@ header {
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 0;
+    padding-bottom: 30px;
     font-size: 20px;
   }
 
