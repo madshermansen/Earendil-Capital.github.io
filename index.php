@@ -1,32 +1,9 @@
 <?php 
+require __DIR__ . '/inc/func.php';
+$array = getinfo("ALL");
+$lastestpost = $array["lp"];
+$results_array = $array["ra"];
 
-// Details for logging in
-$servername = "localhost";
-$username = "root";
-$password = "";
-// Create new connection
-$conn = mysqli_connect($servername, $username, $password, "madsquoa_cms");
-
-// Check the connection
-if (!$conn) {
-    echo "Connection failed: " . mysqli_connect_error();
-    }
-
-// Retrieving the data from the database
-$sql = 'SELECT * FROM `articles` ORDER BY `articles`.`id` ASC';
-// make a query and get results
-$result = mysqli_query($conn, $sql);
-// fetch resulting rows as an array
-$bloginfo = mysqli_fetch_assoc($result);
-
-
-$results_array = array();
-$result = mysqli_query($conn, $sql);
-while ($row = mysqli_fetch_assoc($result)) {
-  $results_array[] = $row;
-}
-
-$lastestpost = end($results_array);
 // Picking the featured article
 // change the id to whatever it needs to be
 $featured_ID = 6;
@@ -35,10 +12,6 @@ foreach ($results_array as $checkid) {
     $featured_post = $checkid;
   }
 }
-
-// Free the result and close the connection
-mysqli_free_result($result);
-mysqli_close($conn);
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +24,7 @@ mysqli_close($conn);
 
   <!-- Titlepage -->
   <body style="background-color: #f9f9f9">
-    <header>
+    <header style="height: 100vh;">
       <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/HomescreenBackground.png"
       data-z-index="-100"></div>
       <!-- Navbar -->

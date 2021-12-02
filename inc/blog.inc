@@ -26,10 +26,10 @@
           <?php 
           foreach ($results_array as $post) {
             echo '<div class="individual-post">
-            <a href="' . $post["HREF"] . '">
+             <a href="' . $post["HREF"] . '">
             <img src="' . $post["Image"] . 
-            '" class="blogimages6"><h1 class="posttitle3"><div class="block2"></div>'
-            . $post["Title"] . '</h1>' . "<h2>" . $post["Topic"] . "</h2>" . '</a><p class="caption3">' 
+            '" class="blogimages6"></a><h1 class="posttitle3"><div class="block2"></div>'
+            . $post["Title"] . '</h1>' . "<h2>" . $post["Topic"] . "</h2>" . '<p class="caption3">' 
             . $post["Summary"] . '</p><div class="psuedopadding"><div class="block3"></div></div></div>'
             ;
                   }

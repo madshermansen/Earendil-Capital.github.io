@@ -9,7 +9,7 @@ function gototop() {
 const navbarafter = document.getElementById("navbar")
 var prevScrollpos = window.pageYOffset;
 document.getElementById("navbar").style.top = "0";
-document.getElementById("menuchange").style.top = "15px";
+document.getElementById("menuchange").style.top = "10px";
 
 window.onscroll = function() {
   var scrollTop = $(window).scrollTop();
@@ -23,7 +23,7 @@ window.onscroll = function() {
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.visibility = "visible";
     document.getElementById("navbar").style.top = "0";
-    document.getElementById("menuchange").style.top = "20px";
+    document.getElementById("menuchange").style.top = "10px";
   } else {
     document.getElementById("navbar").style.top = "-80px";
     document.getElementById("navbar").style.visibility = "hidden";
