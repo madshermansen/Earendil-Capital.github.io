@@ -7,6 +7,7 @@ function gototop() {
 
 // Navbar stuff with scrolling 
 const navbarafter = document.getElementById("navbar")
+var pixels = window.innerHeight;
 var prevScrollpos = window.pageYOffset;
 document.getElementById("navbar").style.top = "0";
 document.getElementById("menuchange").style.top = "10px";
@@ -15,13 +16,15 @@ document.getElementById("ddc").style.margin =  "15px 0 0 0"
 window.onscroll = function() {
   var scrollTop = $(window).scrollTop();
   var pixels = window.innerHeight;
-  if (prevScrollpos > pixels*1/7) {
+  if (prevScrollpos > pixels) {
       document.getElementById("navbar").style.background = "#0E1B31";
     } else {
       document.getElementById("navbar").style.background = "transparent";
     }
+  console.log(prevScrollpos + pixels);
+  console.log(currentScrollPos);
   var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
+  if (prevScrollpos > currentScrollPos || prevScrollpos < pixels - 100) {
     document.getElementById("navbar").style.visibility = "visible";
     document.getElementById("navbar").style.top = "0";
     document.getElementById("menuchange").style.top = "10px";
@@ -40,7 +43,6 @@ window.onscroll = function() {
   // Disable Scroll on Checkbox
 
   $('#active').change(function() {
-    var pixels = window.innerHeight;
     if ($('#active').is(":checked")) { 
       $('html').css('overflow','hidden');
     }
