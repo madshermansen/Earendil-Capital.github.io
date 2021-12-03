@@ -41,15 +41,15 @@
           
           </label>
           <ul class="menu-mobile">
-            <li><a href="index.php">Home</a></li>
-            <li><a href="investing.php">Investing</a></li>
-            <li><a href="blog.php">Blog</a></li>
-            <li><a href="mental-models.php">Mental Models</a></li>
-            <li><a href="miscelaneous.php">Miscelaneous</a></li>
-            <li><a href="philosophy.php">Philosophy</a></li>
-            <li><a href="politics.php">Politics</a></li>
-            <li><a href="book-reviews.php">Book Reveiws</a></li>
-            <li><a href="economics.php">Economics</a></li>
+            <li class="one"><a href="index.php">Home</a></li>
+            <li class="two"><a href="investing.php">Investing</a></li>
+            <li class="three"><a href="blog.php">Blog</a></li>
+            <li class="four"><a href="mental-models.php">Mental Models</a></li>
+            <li class="five"><a href="miscelaneous.php">Miscelaneous</a></li>
+            <li class="six"><a href="philosophy.php">Philosophy</a></li>
+            <li class="seven"><a href="politics.php">Politics</a></li>
+            <li class="eight"><a href="book-reviews.php">Book Reveiws</a></li>
+            <li class="nine"><a href="economics.php">Economics</a></li>
             
           </ul>
         </div>
