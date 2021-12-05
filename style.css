@@ -881,6 +881,7 @@ header {
   border-right: #ffc201 solid 4px;
   z-index: 100;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scrollablebox {
@@ -1310,6 +1311,7 @@ header {
     background: transparent;
     z-index: 1002;
     clip-path: circle(65px at calc(100% -  55px) 25px);
+    background-color: red;
   }
 
   .containernavbar ul {
