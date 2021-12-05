@@ -1309,8 +1309,7 @@ header {
     transition: all 0.5s ease-in-out;
     background: transparent;
     z-index: 1002;
-    clip-path: circle(35px at calc(100% -  45px) 25px);
-    background-color: red;
+    clip-path: circle(65px at calc(100% -  55px) 25px);
   }
 
   .containernavbar ul {
