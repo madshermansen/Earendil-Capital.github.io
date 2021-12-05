@@ -1519,12 +1519,18 @@ header {
     transition-delay: 0s;
   }
 
+  #active:checked ~ .containernavbar .logo{
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
   .headerlogotext2:hover {
     color: white;
   }
 
 
   .logo {
+    visibility: hidden;
     width: 50px;
     z-index: 0;
     position: relative;
