@@ -9,6 +9,7 @@ function gototop() {
 const navbarafter = document.getElementById("navbar")
 var pixels = window.innerHeight;
 var prevScrollpos = window.pageYOffset;
+// Set some elements by scratch
 document.getElementById("navbar").style.top = "0";
 document.getElementById("menuchange").style.top = "10px";
 document.getElementById("ddc").style.margin =  "15px 0 0 0"
