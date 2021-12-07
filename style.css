@@ -1304,14 +1304,13 @@ header {
     position: fixed;
     background: #0E1B31;
     width: 100%;
-    height: calc(100%);
-    bottom: 0;
+    top: 0;
     left: 0%;
     transition: all 0.5s ease-in-out;
     background: transparent;
     z-index: 1002;
-    clip-path: circle(65px at calc(100% -  55px) 25px);
-    background-color: red;
+    height: calc(80px);
+    
   }
 
   .containernavbar ul {
@@ -1410,6 +1409,7 @@ header {
     clip-path: circle(75%);
     color: black;
     z-index: 1002;
+    height: 100%;
   }
 
   #active:checked ~ html {
@@ -1530,11 +1530,12 @@ header {
 
 
   .containernavbar .logo {
-    visibility: hidden;
+    position: absolute;
+    z-index: 100000;
   }
 
   #active:checked ~ .containernavbar .logo {
-    visibility: visible;
+    visibility: hidden;
   }
 
   .logo {
