@@ -461,8 +461,6 @@ header {
   left: 20px;
   width: 50px;
   height: auto;
-  
-
 }
 
 .headerlogotext {
@@ -1529,16 +1527,27 @@ header {
   }
 
 
-  .containernavbar .logo {
-    position: absolute;
-    z-index: 100000;
+  .containernavbar .logo2 {
+    visibility: hidden;
+    transition: 0s;
+    transition-delay: 0.5s;
   }
 
   #active:checked ~ .containernavbar .logo {
     visibility: hidden;
+    transition: 0s;
+    transition-delay: 0s;
+  }
+
+  #active:checked ~ .containernavbar .logo2 {
+    visibility: visible;
+    transition: 0s;
+    transition-delay: 0s;
   }
 
   .logo {
+    transition: 0s;
+    transition-delay: 0.5s;
     width: 50px;
     z-index: 0;
     position: relative;

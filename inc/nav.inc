@@ -31,7 +31,7 @@
                 <img
             src="Favicon/android-chrome-192x192.png"
             alt="logo of website"
-            class="logo"
+            class="logo logo2"
         />
         <a href="index.php" class="headerlogotext2"
           >Earendil Capital</a>
