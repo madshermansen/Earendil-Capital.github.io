@@ -25,8 +25,10 @@ foreach ($results_array as $checkid) {
   <!-- Titlepage -->
   <body style="background-color: #f9f9f9">
     <header style="height: 100vh;">
-      <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/HomescreenBackground.png"
-      data-z-index="-100"></div>
+      <!-- <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/HomescreenBackground.png"
+      data-z-index="-100"></div> -->
+      <div class="Homepage-Background" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1536859975388-b5e6623e9223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      data-z-index="-100">
       <!-- Navbar -->
   <?php include('inc/nav.inc') ?>
   <!-- Navbar end -->

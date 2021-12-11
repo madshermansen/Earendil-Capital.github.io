@@ -17,13 +17,11 @@ document.getElementById("ddc").style.margin =  "15px 0 0 0"
 window.onscroll = function() {
   var scrollTop = $(window).scrollTop();
   var pixels = window.innerHeight;
-  if (prevScrollpos > pixels) {
+  if (prevScrollpos > pixels * 1/7) {
       document.getElementById("navbar").style.background = "#0E1B31";
     } else {
       document.getElementById("navbar").style.background = "transparent";
     }
-  console.log(prevScrollpos + pixels);
-  console.log(currentScrollPos);
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos || prevScrollpos < pixels - 100) {
     document.getElementById("navbar").style.visibility = "visible";
@@ -52,3 +50,7 @@ window.onscroll = function() {
     }
   });
   
+document.getElementById('subscribe').onclick = function() {
+  console.log("hi!")
+}
+
