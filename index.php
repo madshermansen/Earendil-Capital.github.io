@@ -27,7 +27,7 @@ foreach ($results_array as $checkid) {
     <header style="height: 100vh;">
       <!-- <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/HomescreenBackground.png"
       data-z-index="-100"></div> -->
-      <div class="Homepage-Background" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1536859975388-b5e6623e9223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+      <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Blog/latestpostbg.jpg"
       data-z-index="-100">
       <!-- Navbar -->
   <?php include('inc/nav.inc') ?>
@@ -126,7 +126,7 @@ foreach ($results_array as $checkid) {
 
   <!-- Lastest Posts -->
   <div class="latestpostcontainer">
-    <div class="latestposts2" data-parallax="scroll" data-image-src="Assets/Blog/latestpostbg.jpg">
+    <div class="latestposts2" data-parallax="scroll" data-image-src="https://images.unsplash.com/photo-1536859975388-b5e6623e9223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80">
 
     <div class="latestpostsinfo">
       <div class="mylatestinfo">
