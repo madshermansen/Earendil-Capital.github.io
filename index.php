@@ -27,7 +27,7 @@ foreach ($results_array as $checkid) {
     <header style="height: 100vh;">
       <!-- <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/HomescreenBackground.png"
       data-z-index="-100"></div> -->
-      <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/eberhard-grossgasteiger-YBPIQ3JPdvo-unsplash.jpg"
+      <div class="Homepage-Background" data-parallax="scroll" data-image-src="Assets/Home-screen/background-top.jpg"
       data-z-index="-100">
       <!-- Navbar -->
   <?php include('inc/nav.inc') ?>
@@ -126,7 +126,7 @@ foreach ($results_array as $checkid) {
 
   <!-- Lastest Posts -->
   <div class="latestpostcontainer">
-    <div class="latestposts2" data-parallax="scroll" data-image-src="Assets/Home-screen/eberhard-grossgasteiger-YBPIQ3JPdvo-unsplash.jpg">
+    <div class="latestposts2" data-parallax="scroll" data-image-src="Assets/Home-screen/background-bot.jpg">
 
     <div class="latestpostsinfo">
       <div class="mylatestinfo">
